@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="EduProjectPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.spontecorp.eduproject.entity.Estado</class>
+    <class>com.spontecorp.eduproject.entity.Deporte</class>
+    <class>com.spontecorp.eduproject.entity.Usuario</class>
+    <class>com.spontecorp.eduproject.entity.Religion</class>
+    <class>com.spontecorp.eduproject.entity.Ciudad</class>
+    <class>com.spontecorp.eduproject.entity.Reconocimiento</class>
+    <class>com.spontecorp.eduproject.entity.Institucion</class>
+    <class>com.spontecorp.eduproject.entity.Sector</class>
+    <class>com.spontecorp.eduproject.entity.Zip</class>
+    <class>com.spontecorp.eduproject.entity.Telefono</class>
+    <class>com.spontecorp.eduproject.entity.Email</class>
+    <class>com.spontecorp.eduproject.entity.Pais</class>
+    <class>com.spontecorp.eduproject.entity.ActividadExtra</class>
+    <class>com.spontecorp.eduproject.entity.Nivel</class>
+    <class>com.spontecorp.eduproject.entity.Idioma</class>
+    <class>com.spontecorp.eduproject.entity.Construccion</class>
+    <class>com.spontecorp.eduproject.entity.Turno</class>
+    <class>com.spontecorp.eduproject.entity.Perfil</class>
+    <class>com.spontecorp.eduproject.entity.Tipo</class>
+    <class>com.spontecorp.eduproject.entity.Servicio</class>
+    <class>com.spontecorp.eduproject.entity.Informacion</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://spontedev32:3306/edudb?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.password" value="remote"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="remote"/>
+    </properties>
+  </persistence-unit>
+</persistence>
