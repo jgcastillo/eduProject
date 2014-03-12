@@ -70,14 +70,15 @@ public class MainFrame extends JFrame {
         } catch (IOException e) {
             System.out.println("No cargo la imagen: " + e.getLocalizedMessage());
         }
-        
-        System.out.println("W: " + screenSize.getWidth() + "H: " + screenSize.getHeight());
+        final int posX = (int)screenSize.getWidth()/2 - backImage.getWidth()/2;
+        final int posY = (int)screenSize.getHeight()/2 - backImage.getHeight()/2;
+
         deskTopPane = new JDesktopPane(){
 
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                g.drawImage(backImage, 0, 0, null);
+                g.drawImage(backImage, posX, posY, null);
             }
 
             @Override
@@ -99,17 +100,17 @@ public class MainFrame extends JFrame {
     private void initComponents() {
 
         menuBar = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        adminMenu = new javax.swing.JMenu();
+        datosMenu = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Proyecto Colegios - Data Entry");
 
-        jMenu1.setText("File");
-        menuBar.add(jMenu1);
+        adminMenu.setText("Administración");
+        menuBar.add(adminMenu);
 
-        jMenu2.setText("Edit");
-        menuBar.add(jMenu2);
+        datosMenu.setText("Datos");
+        menuBar.add(datosMenu);
 
         setJMenuBar(menuBar);
 
@@ -163,8 +164,8 @@ public class MainFrame extends JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu adminMenu;
+    private javax.swing.JMenu datosMenu;
     private javax.swing.JMenuBar menuBar;
     // End of variables declaration//GEN-END:variables
 }
